@@ -1,1 +1,20 @@
-<h1>Keuangan</h1>
+<h1>Keuangan RT</h1>
+
+<table border="1">
+<tr><th>Tanggal</th><th>Keterangan</th><th>Masuk</th><th>Keluar</th><th>Saldo</th></tr>
+<tr><td>01/09/2025</td><td>Iuran Warga</td><td>Rp 1.000.000</td><td>-</td><td>Rp 1.000.000</td></tr>
+<tr><td>05/09/2025</td><td>Biaya Kebersihan</td><td>-</td><td>Rp 300.000</td><td>Rp 700.000</td></tr>
+</table>
+
+<canvas id="chartKeuangan"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('chartKeuangan');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar'],
+    datasets: [{ label: 'Saldo', data: [500000, 300000, 700000] }]
+  }
+});
+</script>
